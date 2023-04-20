@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Licznik wynosi: <span id="maja">0</span></p>
+    <button class="increment">Zwiększ licznik</button>
+    <button class="decrement">Zmniejsz licznik</button>
+    <script>
+      let counter = document.querySelector('#maja')
+      let incrementButton = document.querySelector('.increment')
+      let decrementButton = document.querySelector('.decrement')
+
+      function incrementCounter() {
+        console.log(typeof counter.textContent)
+        // counter.textContent++;
+
+        counter.textContent = Number(counter.textContent) + 1
+      }
+
+      function decrementCounter() {
+        counter.textContent--
+      }
+
+      incrementButton.addEventListener('click', incrementCounter)
+      decrementButton.addEventListener('click', decrementCounter)
+    </script>
+  </body>
+</html>
